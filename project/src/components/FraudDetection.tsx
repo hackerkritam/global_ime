@@ -19,20 +19,7 @@ export default function FraudDetection() {
         />
      
                  
-function StatCard({ title, value, change, icon, type }: { 
-  title: string, 
-  value: string, 
-  change: string, 
-  icon: React.ReactNode,
-  type: 'warning' | 'success' | 'info'
-}) {
-  const colors = {
-    warning: 'text-yellow-600',
-    success: 'text-green-600',
-    info: 'text-blue-600'
-  };
-
-  return (
+ 
     <div className="bg-white rounded-lg shadow p-6">
       <div className="flex items-center justify-between">
         <div className={colors[type]}>{icon}</div>
