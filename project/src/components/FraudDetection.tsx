@@ -18,31 +18,7 @@ export default function FraudDetection() {
            type="info"
         />
      
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:col-span-1">
-          {selectedTransaction ? (
-            <TransactionDetails transaction={selectedTransaction} />
-          ) : (
-            <div className="bg-white rounded-lg shadow p-6 h-full flex items-center justify-center text-gray-500">
-              Select a transaction to view details
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <RiskPatterns />
-        <PreventiveMeasures />
-      </div>
-    </div>
-  );
-}
-
+                 
 function StatCard({ title, value, change, icon, type }: { 
   title: string, 
   value: string, 
