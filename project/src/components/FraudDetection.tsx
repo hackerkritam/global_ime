@@ -3,6 +3,15 @@ import { AlertTriangle, ArrowUpRight, Clock, MapPin, CreditCard, Shield } from '
 
 const mockTransactions = [
   {
+    id: 1,
+    amount: 25000,
+    type: 'transfer',
+    location: 'Kathmandu, Nepal',
+    timestamp: '2024-03-20T10:30:00',
+    risk: 'high',
+    flags: ['Unusual amount', 'Different location', 'Multiple attempts']
+  },
+  {
     id: 2,
     amount: 1500,
     type: 'withdrawal',
