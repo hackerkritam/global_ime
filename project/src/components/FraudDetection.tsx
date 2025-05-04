@@ -20,19 +20,7 @@ export default function FraudDetection() {
      
                  
  
-    <div className="bg-white rounded-lg shadow p-6">
-      <div className="flex items-center justify-between">
-        <div className={colors[type]}>{icon}</div>
-        <span className={`text-sm font-medium ${colors[type]}`}>
-          {change}
-        </span>
-      </div>
-      <h3 className="text-xl font-semibold text-gray-900 mt-4">{value}</h3>
-      <p className="text-sm text-gray-600">{title}</p>
-    </div>
-  );
-}
-
+    
 function TransactionCard({ 
   transaction, 
   onClick, 
@@ -46,7 +34,7 @@ function TransactionCard({
     high: 'bg-red-100 text-red-800',
     medium: 'bg-yellow-100 text-yellow-800',
     low: 'bg-green-100 text-green-800'
-  };
+  }
 
   return (
     <div
