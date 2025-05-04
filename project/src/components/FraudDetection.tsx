@@ -7,7 +7,20 @@ export default function FraudDetection() {
   const [selectedTransaction, setSelectedTransaction] = useState<typeof mockTransactions[0] | null>(null);
 
   return (
-         />
+    <div className="space-y-8">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-gray-900">Fraud Detection System</h1>
+        <p className="mt-2 text-gray-600">Real-time monitoring and analysis of suspicious transactions</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StatCard
+          title="Suspicious Transactions"
+          value="15"
+          change="+5"
+          icon={<AlertTriangle className="h-6 w-6" />}
+          type="warning"
+        />
         <StatCard
           title="Average Response Time"
           value="45s"
@@ -15,7 +28,19 @@ export default function FraudDetection() {
           icon={<Clock className="h-6 w-6" />}
           type="success"
         />
-           type="info"
+        <StatCard
+          title="Fraud Prevented"
+          value="₹2.5M"
+          change="+₹500K"
+          icon={<Shield className="h-6 w-6" />}
+          type="success"
+        />
+        <StatCard
+          title="Active Monitoring"
+          value="24/7"
+          change="100%"
+          icon={<CreditCard className="h-6 w-6" />}
+          type="info"
         />
       </div>
 
