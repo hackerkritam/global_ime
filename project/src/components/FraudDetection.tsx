@@ -30,7 +30,10 @@ function TransactionCard({
   onClick: () => void,
   selected: boolean
 }) {
- 
+  const riskColors = {
+    high: 'bg-red-100 text-red-800',
+    medium: 'bg-yellow-100 text-yellow-800',
+  }
 
   return (
     <div
