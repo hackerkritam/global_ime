@@ -2,53 +2,12 @@ import React, { useState } from 'react';
 import { AlertTriangle, ArrowUpRight, Clock, MapPin, CreditCard, Shield } from 'lucide-react';
 
 const mockTransactions = [
-  {
-    id: 1,
-    amount: 25000,
-    type: 'transfer',
-    location: 'Kathmandu, Nepal',
-    timestamp: '2024-03-20T10:30:00',
-    risk: 'high',
-    flags: ['Unusual amount', 'Different location', 'Multiple attempts']
-  },
-  {
-    id: 2,
-    amount: 1500,
-    type: 'withdrawal',
-    location: 'Dharan, Nepal',
-    timestamp: '2024-03-20T11:15:00',
-    risk: 'medium',
-    flags: ['Frequent small transactions']
-  },
-  {
-    id: 3,
-    amount: 50000,
-    type: 'transfer',
-    location: 'Pokhara, Nepal',
-    timestamp: '2024-03-20T12:00:00',
-    risk: 'high',
-    flags: ['International transaction', 'Large amount', 'New recipient']
-  }
-];
-
+  
 export default function FraudDetection() {
   const [selectedTransaction, setSelectedTransaction] = useState<typeof mockTransactions[0] | null>(null);
 
   return (
-    <div className="space-y-8">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900">Fraud Detection System</h1>
-        <p className="mt-2 text-gray-600">Real-time monitoring and analysis of suspicious transactions</p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard
-          title="Suspicious Transactions"
-          value="15"
-          change="+5"
-          icon={<AlertTriangle className="h-6 w-6" />}
-          type="warning"
-        />
+         />
         <StatCard
           title="Average Response Time"
           value="45s"
