@@ -17,21 +17,7 @@ export default function FraudDetection() {
         />
            type="info"
         />
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <div className="bg-white rounded-lg shadow">
-            <div className="p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">Suspicious Transactions</h2>
-              <div className="space-y-4">
-                {mockTransactions.map((transaction) => (
-                  <TransactionCard
-                    key={transaction.id}
-                    transaction={transaction}
-                    onClick={() => setSelectedTransaction(transaction)}
-                    selected={selectedTransaction?.id === transaction.id}
-                  />
+     
                 ))}
               </div>
             </div>
