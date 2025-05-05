@@ -2,7 +2,35 @@ import React, { useState } from 'react';
 import { AlertTriangle, ArrowUpRight, Clock, MapPin, CreditCard, Shield } from 'lucide-react';
 
 const mockTransactions = [
-  
+  {
+    id: 1,
+    amount: 25000,
+    type: 'transfer',
+    location: 'Kathmandu, Nepal',
+    timestamp: '2024-03-20T10:30:00',
+    risk: 'high',
+    flags: ['Unusual amount', 'Different location', 'Multiple attempts']
+  },
+  {
+    id: 2,
+    amount: 1500,
+    type: 'withdrawal',
+    location: 'Dharan, Nepal',
+    timestamp: '2024-03-20T11:15:00',
+    risk: 'medium',
+    flags: ['Frequent small transactions']
+  },
+  {
+    id: 3,
+    amount: 50000,
+    type: 'transfer',
+    location: 'Pokhara, Nepal',
+    timestamp: '2024-03-20T12:00:00',
+    risk: 'high',
+    flags: ['International transaction', 'Large amount', 'New recipient']
+  }
+];
+
 export default function FraudDetection() {
   const [selectedTransaction, setSelectedTransaction] = useState<typeof mockTransactions[0] | null>(null);
 
