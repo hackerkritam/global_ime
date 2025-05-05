@@ -15,7 +15,19 @@ export default function FraudDetection() {
           icon={<Clock className="h-6 w-6" />}
           type="success"
         />
-           type="info"
+        <StatCard
+          title="Fraud Prevented"
+          value="₹2.5M"
+          change="+₹500K"
+          icon={<Shield className="h-6 w-6" />}
+          type="success"
+        />
+        <StatCard
+          title="Active Monitoring"
+          value="24/7"
+          change="100%"
+          icon={<CreditCard className="h-6 w-6" />}
+          type="info"
         />
       </div>
 
