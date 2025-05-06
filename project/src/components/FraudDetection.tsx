@@ -225,17 +225,6 @@ function RiskPatterns() {
 }
 
 function PreventiveMeasures() {
-  return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <h2 className="text-xl font-semibold text-gray-900 mb-4">Preventive Measures</h2>
-      <div className="space-y-4">
-        {[
-          {
-            title: 'Two-Factor Authentication',
-            description: 'Enabled for all high-risk transactions',
-            status: 'Active'
-          },
-          {
             title: 'Location Monitoring',
             description: 'Track unusual transaction locations',
             status: 'Active'
