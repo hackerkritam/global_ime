@@ -3,35 +3,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FileText, PieChart, TrendingUp, ShieldAlert, Home } from 'lucide-react';
 import FraudDetection from './components/FraudDetection';
 
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <nav className="bg-red-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <Link to="/" className="flex items-center space-x-2">
-                  <Home className="w-6 h-6" />
-                  <span className="font-bold text-xl">Global IME Bank </span>
-                </Link>
-              </div>
-              <div className="flex space-x-4">
-                    
-              </div>
-            </div>
+function  
           </div>
         </nav>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Routes>
-           
-            <Route path="/" element={<FraudDetection />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
+        <
 }
 
 function HomePage() {
