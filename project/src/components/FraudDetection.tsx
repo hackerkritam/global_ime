@@ -215,19 +215,7 @@ function RiskPatterns() {
       <div className="space-y-4">
         {[
           { pattern: 'Multiple transactions from different locations', risk: 'High', count: 12 },
-          { pattern: 'Unusual transaction timing', risk: 'Medium', count: 8 },
-          { pattern: 'Frequent small transfers', risk: 'Medium', count: 15 },
-          { pattern: 'Large international transfers', risk: 'High', count: 5 }
-        ].map((item, index) => (
-          <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
-            <div>
-              <p className="font-medium text-gray-900">{item.pattern}</p>
-              <p className="text-sm text-gray-600 mt-1">Occurrences: {item.count}</p>
-            </div>
-            <span className={`px-3 py-1 rounded-full text-sm ${
-              item.risk === 'High' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
-            }`}>
-              {item.risk}
+         
             </span>
           </div>
         ))}
