@@ -3,6 +3,15 @@ import { AlertTriangle, ArrowUpRight, Clock, MapPin, CreditCard, Shield } from '
 
 const mockTransactions = [
   {
+    id: 1,
+    amount: 25000,
+    type: 'transfer',
+    location: 'Kathmandu, Nepal',
+    timestamp: '2024-03-20T10:30:00',
+    risk: 'high',
+    flags: ['Unusual amount', 'Different location', 'Multiple attempts']
+  },
+  {
     id: 2,
     amount: 1500,
     type: 'withdrawal',
@@ -215,8 +224,63 @@ function RiskPatterns() {
       <div className="space-y-4">
         {[
           { pattern: 'Multiple transactions from different locations', risk: 'High', count: 12 },
-         
+          { pattern: 'Unusual transaction timing', risk: 'Medium', count: 8 },
+          { pattern: 'Frequent small transfers', risk: 'Medium', count: 15 },
+          { pattern: 'Large international transfers', risk: 'High', count: 5 }
+        ].map((item, index) => (
+          <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
+            <div>
+              <p className="font-medium text-gray-900">{item.pattern}</p>
+              <p className="text-sm text-gray-600 mt-1">Occurrences: {item.count}</p>
+            </div>
+            <span className={`px-3 py-1 rounded-full text-sm ${
+              item.risk === 'High' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
+            }`}>
+              {item.risk}
             </span>
           </div>
         ))}
-    
+      </div>
+    </div>
+  );
+}
+
+function PreventiveMeasures() {
+  return (
+    <div className="bg-white rounded-lg shadow p-6">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Preventive Measures</h2>
+      <div className="space-y-4">
+        {[
+          {
+            title: 'Two-Factor Authentication',
+            description: 'Enabled for all high-risk transactions',
+            status: 'Active'
+          },
+          {
+            title: 'Location Monitoring',
+            description: 'Track unusual transaction locations',
+            status: 'Active'
+          },
+          {
+            title: 'Amount Thresholds',
+            description: 'Automatic flagging of large transactions',
+            status: 'Active'
+          },
+          {
+            title: 'Pattern Recognition',
+            description: 'ML-based suspicious pattern detection',
+            status: 'Active'
+          }
+        ].map((measure, index) => (
+          <div key={index} className="flex items-center p-4 border rounded-lg">
+            <Shield className="h-6 w-6 text-green-600 mr-4" />
+            <div>
+              <p className="font-medium text-gray-900">{measure.title}</p>
+              <p className="text-sm text-gray-600">{measure.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
