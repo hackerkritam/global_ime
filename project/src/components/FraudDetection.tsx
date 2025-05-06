@@ -238,17 +238,4 @@ function PreventiveMeasures() {
             title: 'Pattern Recognition',
             description: 'ML-based suspicious pattern detection',
             status: 'Active'
-          }
-        ].map((measure, index) => (
-          <div key={index} className="flex items-center p-4 border rounded-lg">
-            <Shield className="h-6 w-6 text-green-600 mr-4" />
-            <div>
-              <p className="font-medium text-gray-900">{measure.title}</p>
-              <p className="text-sm text-gray-600">{measure.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+   
