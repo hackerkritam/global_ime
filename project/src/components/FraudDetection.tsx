@@ -219,23 +219,4 @@ function RiskPatterns() {
             </span>
           </div>
         ))}
-      </div>
-    </div>
-  );
-}
-
-function PreventiveMeasures() {
-            title: 'Location Monitoring',
-            description: 'Track unusual transaction locations',
-            status: 'Active'
-          },
-          {
-            title: 'Amount Thresholds',
-            description: 'Automatic flagging of large transactions',
-            status: 'Active'
-          },
-          {
-            title: 'Pattern Recognition',
-            description: 'ML-based suspicious pattern detection',
-            status: 'Active'
-   
+    
